@@ -33,6 +33,11 @@ module.exports = {
         type:Sequelize.INTEGER,
         references:{model:'categoria',key:"id"}
       },
+      usuarioId: {
+        type: Sequelize.INTEGER,
+        allowNull:false,
+        references:{model:'usuarios',key:'id'}
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

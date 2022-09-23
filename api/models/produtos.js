@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     descricao: DataTypes.STRING,
     desconto:DataTypes.FLOAT,
     quantidade:DataTypes.INTEGER,
+    usuarioId:DataTypes.INTEGER
     //opcoes:DataTypes.STRING
     
   }, {

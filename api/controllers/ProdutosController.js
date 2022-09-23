@@ -14,8 +14,8 @@ class ProdutosController{
   static async pegaUmProduto(req,res){
     const {id} = req.params;
     try{
-      const Produto = await database.produtos.findOne({where:{id:Number(id)}})
-      return res.status(200).json({Produto})
+      const produto = await database.produtos.findOne({where:{id:Number(id)}})
+      return res.status(200).json({produto})
     }catch(erro){
       return res.status(500).json(erro)
     }

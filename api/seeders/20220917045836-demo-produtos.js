@@ -10,6 +10,7 @@ module.exports = {
       descricao: "Um notebook muito bom",
       categoria_id:1,
       quantidade:2,
+      usuarioId:1,
       createdAt:new Date(),
       updatedAt:new Date()
     },{
@@ -19,6 +20,7 @@ module.exports = {
       descricao: "Um notebook muito bom",
       categoria_id:1,
       quantidade:2,
+      usuarioId:1,
       createdAt:new Date(),
       updatedAt:new Date()
     },{
@@ -28,6 +30,7 @@ module.exports = {
       descricao: "Um notebook muito bom",
       categoria_id:1,
       quantidade:2,
+      usuarioId:1,
       createdAt:new Date(),
       updatedAt:new Date()
     },{
@@ -37,6 +40,7 @@ module.exports = {
       descricao: "Um notebook muito bom",
       categoria_id:1,
       quantidade:2,
+      usuarioId:1,
       createdAt:new Date(),
       updatedAt:new Date()
     },{
@@ -46,6 +50,7 @@ module.exports = {
       descricao: "Um notebook muito bom",
       categoria_id:2,
       quantidade:2,
+      usuarioId:1,
       createdAt:new Date(),
       updatedAt:new Date()
     },{
@@ -55,6 +60,7 @@ module.exports = {
       descricao: "Um notebook muito bom",
       categoria_id:2,
       quantidade:2,
+      usuarioId:1,
       createdAt:new Date(),
       updatedAt:new Date()
     },{
@@ -64,6 +70,7 @@ module.exports = {
       descricao: "Um notebook muito bom",
       categoria_id:2,
       quantidade:2,
+      usuarioId:1,
       createdAt:new Date(),
       updatedAt:new Date()
     },{
@@ -73,42 +80,47 @@ module.exports = {
       descricao: "Um notebook muito bom",
       categoria_id:2,
       quantidade:2,
+      usuarioId:1,
       createdAt:new Date(),
       updatedAt:new Date()
     },{
       nome: "Iphone 11",
       preco: 3229,
-      imagem: 'https://http2.mlstatic.com/D_NQ_NP_737187-MLA50580341363_072022-O.webp',
+      imagem: 'https://images-na.ssl-images-amazon.com/images/I/71kZfQA-Y7L.__AC_SY445_SX342_QL70_ML2_.jpg',
       descricao: "Um celular muito bom",
       categoria_id:3,
       quantidade:2,
+      usuarioId:1,
       createdAt:new Date(),
       updatedAt:new Date()
     },{
       nome: "Iphone 11",
       preco: 3229,
-      imagem: 'https://http2.mlstatic.com/D_NQ_NP_737187-MLA50580341363_072022-O.webp',
+      imagem: 'https://images-na.ssl-images-amazon.com/images/I/71kZfQA-Y7L.__AC_SY445_SX342_QL70_ML2_.jpg',
       descricao: "Um celular muito bom",
       categoria_id:3,
       quantidade:2,
+      usuarioId:1,
       createdAt:new Date(),
       updatedAt:new Date()
     },{
       nome: "Iphone 11",
       preco: 3229,
-      imagem: 'https://http2.mlstatic.com/D_NQ_NP_737187-MLA50580341363_072022-O.webp',
+      imagem: 'https://images-na.ssl-images-amazon.com/images/I/71kZfQA-Y7L.__AC_SY445_SX342_QL70_ML2_.jpg',
       descricao: "Um celular muito bom",
       categoria_id:3,
       quantidade:2,
+      usuarioId:1,
       createdAt:new Date(),
       updatedAt:new Date()
     },{
       nome: "Iphone 11",
       preco: 3229,
-      imagem: 'https://http2.mlstatic.com/D_NQ_NP_737187-MLA50580341363_072022-O.webp',
+      imagem: 'https://images-na.ssl-images-amazon.com/images/I/71kZfQA-Y7L.__AC_SY445_SX342_QL70_ML2_.jpg',
       descricao: "Um celular muito bom",
       categoria_id:3,
       quantidade:2,
+      usuarioId:1,
       createdAt:new Date(),
       updatedAt:new Date()
     },], {});
