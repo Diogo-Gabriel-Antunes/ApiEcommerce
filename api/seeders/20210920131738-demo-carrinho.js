@@ -6,7 +6,11 @@ module.exports = {
      await queryInterface.bulkInsert('carrinhos', [{
        createdAt:new Date(),
        updatedAt:new Date()
-     }], {});
+     },
+     {
+      createdAt:new Date(),
+      updatedAt:new Date()
+    }], {});
     
   },
 

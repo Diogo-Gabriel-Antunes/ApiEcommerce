@@ -11,6 +11,14 @@ module.exports = {
       carrinhoId:1,
       createdAt:new Date(),
       updatedAt:new Date()
+    },{
+      nome: "diogo",
+      email: "diogo@email.com.br",
+      senha: "$2b$12$BfFEX6PBP1H5etlNNscFaObuKwFE50D7MMMfYk0FvCPf0nHGtNHQa",
+      role: "USER",
+      carrinhoId:2,
+      createdAt:new Date(),
+      updatedAt:new Date()
     }], {});
 
   },

@@ -64,7 +64,25 @@ class ProdutosController{
       return res.status(500).json(erro)
     }
   }
+  static async produtoPorUsuario(req,res){
+    const {usuarioid} = req.params;
+    
+    try{
+      const produtosPorUsuario = await database.produtos.findAll({
+        where:{
+          usuarioId:usuarioid
+        },
+        order:[['id','DESC']]
+      
+      })
+      
+      return res.status(200).json({produtosPorUsuario})
+    }catch(erro){
+      return res.status(500).json(erro)
+    }
+  }
 
 }
+
 
 module.exports = ProdutosController
