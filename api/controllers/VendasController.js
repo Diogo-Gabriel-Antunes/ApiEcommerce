@@ -107,9 +107,54 @@ class CategoriaController{
           order:[['id','DESC']]
         
         })
-        return res.status(200).json({vendas})
+        
+        const totalGanhoQuery = await sequelize.query(`select SUM((valor * quantidade)) as total from vendas where usuarioId = ${usuarioid} and data <= '${ano}-${mes}-30' AND data >= '${ano}-${mes}-1'`, { type: QueryTypes.SELECT });
+        
+        const totalVendido = await database.vendas.findAll({
+          attributes:[ 
+            [sequelize.fn('COUNT',sequelize.col('quantidade')),'total']
+          ],
+          where:{
+            usuarioId:usuarioid,
+            data:{
+              [Op.lte]:`${ano}-${mes}-30`,
+              [Op.gte]:`${ano}-${mes}-1`
+            }
+          }
+        
+        })
+        const totalVendidoNoMes=totalVendido[0].dataValues.total
+        const ProdutoMaisVendidoQuery = await database.vendas.findAll({
+          attributes:[
+            'produtoId',
+            [sequelize.fn('SUM',sequelize.col('quantidade')),'total']
+          ],
+          where:{
+            usuarioId:usuarioid,
+            data:{
+              [Op.lte]:`${ano}-${mes}-30`,
+              [Op.gte]:`${ano}-${mes}-1`
+            }
+          },
+          group:"produtoId",
+          order: sequelize.literal('SUM(quantidade) DESC'),
+          limit : 1,
+                  
+        })
+        const ProdutoMaisVendido = await database.produtos.findOne({where:{id:ProdutoMaisVendidoQuery[0].produtoId}})
+        const totalGanho = totalGanhoQuery[0].total
+        const quantidadeDeProdutosVendidos = await database.vendas.sum('quantidade',{
+          where:{
+            usuarioId:usuarioid,
+            data:{
+              [Op.lte]:`${ano}-${mes}-30`,
+              [Op.gte]:`${ano}-${mes}-1`
+            }
+          }})
+
+        return res.status(200).json({vendas,totalGanho,ProdutoMaisVendido,quantidadeDeProdutosVendidos,totalVendidoNoMes})
     }catch(erro){
-      return res.status(500).json(erro)
+      return res.status(500).json({erro})
     }
   }
  

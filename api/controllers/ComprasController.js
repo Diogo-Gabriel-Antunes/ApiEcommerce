@@ -4,7 +4,7 @@ class ComprasController{
 
   static async PegaTodasCompras(req,res){
     try{
-      const compras = await database.compras.findAll()
+      const compras = await database.compras.findAll({order:[['id','DESC']]})
       return res.status(200).json({compras})
     }catch(erro){
       return res.status(500).json(erro)
